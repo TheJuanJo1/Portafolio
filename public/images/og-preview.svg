@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030712"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="280" font-family="system-ui,sans-serif" font-size="72" font-weight="700" fill="#f1f5f9">Juan Moreno</text>
+  <text x="80" y="360" font-family="system-ui,sans-serif" font-size="36" fill="#60a5fa">Desarrollador Full Stack</text>
+  <text x="80" y="430" font-family="system-ui,sans-serif" font-size="24" fill="#94a3b8">Laravel · Livewire · Tailwind CSS</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect width="800" height="450" fill="#0f172a"/>
+  <rect x="40" y="40" width="720" height="60" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="60" y="78" font-family="system-ui" font-size="18" fill="#a78bfa">Evaluación de Desempeño Institucional</text>
+  <rect x="40" y="120" width="340" height="290" rx="8" fill="#1e293b" stroke="#7c3aed" stroke-opacity="0.4"/>
+  <circle cx="120" cy="200" r="40" fill="#312e81"/>
+  <rect x="180" y="170" width="160" height="10" rx="3" fill="#475569"/>
+  <rect x="180" y="190" width="120" height="8" rx="2" fill="#334155"/>
+  <rect x="60" y="260" width="280" height="8" rx="2" fill="#4c1d95" opacity="0.6"/>
+  <rect x="60" y="280" width="240" height="8" rx="2" fill="#334155"/>
+  <rect x="400" y="120" width="360" height="140" rx="8" fill="#1e3a5f"/>
+  <rect x="420" y="150" width="80" height="80" rx="40" fill="none" stroke="#8b5cf6" stroke-width="6" stroke-dasharray="180" stroke-dashoffset="40"/>
+  <rect x="400" y="280" width="360" height="130" rx="8" fill="#1e293b" stroke="#334155"/>
+</svg>

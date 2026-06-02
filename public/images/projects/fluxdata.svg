@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="#030712"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <rect x="30" y="30" width="180" height="390" rx="10" fill="rgba(15,23,42,0.9)" stroke="rgba(6,182,212,0.3)"/>
+  <text x="50" y="70" font-family="system-ui" font-size="22" font-weight="700" fill="#22d3ee">FluxData</text>
+  <rect x="50" y="90" width="140" height="8" rx="2" fill="#164e63"/>
+  <rect x="230" y="30" width="540" height="100" rx="10" fill="rgba(15,23,42,0.8)" stroke="rgba(59,130,246,0.3)"/>
+  <rect x="250" y="55" width="120" height="60" rx="8" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-opacity="0.5"/>
+  <text x="265" y="95" font-family="system-ui" font-size="24" font-weight="700" fill="#67e8f9">$48.2K</text>
+  <rect x="390" y="55" width="120" height="60" rx="8" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-opacity="0.5"/>
+  <text x="410" y="95" font-family="system-ui" font-size="24" font-weight="700" fill="#93c5fd">1,247</text>
+  <rect x="530" y="55" width="120" height="60" rx="8" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-opacity="0.5"/>
+  <text x="555" y="95" font-family="system-ui" font-size="24" font-weight="700" fill="#c4b5fd">98%</text>
+  <rect x="230" y="150" width="540" height="270" rx="10" fill="rgba(15,23,42,0.8)" stroke="rgba(6,182,212,0.2)"/>
+  <rect x="260" y="280" width="40" height="100" rx="4" fill="url(#bar)"/>
+  <rect x="320" y="240" width="40" height="140" rx="4" fill="url(#bar)" opacity="0.8"/>
+  <rect x="380" y="200" width="40" height="180" rx="4" fill="url(#bar)"/>
+  <rect x="440" y="260" width="40" height="120" rx="4" fill="url(#bar)" opacity="0.7"/>
+  <rect x="500" y="220" width="40" height="160" rx="4" fill="url(#bar)" opacity="0.9"/>
+  <rect x="560" y="180" width="40" height="200" rx="4" fill="url(#bar)"/>
+  <path d="M260 200 Q400 120 540 180 T700 150" stroke="#22d3ee" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>
