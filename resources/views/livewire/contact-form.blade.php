@@ -1,5 +1,5 @@
-<div class="max-w-2xl mx-auto reveal">
-    @if($submitted)
+<div class="max-w-2xl mx-auto" x-data="{ showSuccess: @entangle('submitted') }" x-init="$watch('showSuccess', value => { if (value) setTimeout(() => showSuccess = false, 4000) })">
+    <template x-if="showSuccess">
         <div
             class="success-message"
             role="status"
@@ -13,9 +13,9 @@
                 <p class="text-sm text-[var(--text-muted)] mt-1">Gracias por contactarme. Te responderé lo antes posible.</p>
             </div>
         </div>
-    @endif
+    </template>
 
-    <form wire:submit="submit" class="glass-card p-6 md:p-8 space-y-5 @if($submitted) opacity-60 pointer-events-none @endif" novalidate>
+    <form wire:submit="submit" class="glass-card p-6 md:p-8 space-y-5" :class="{'opacity-60 pointer-events-none': showSuccess}" novalidate>
         <div>
             <label for="contact-name" class="form-label">Nombre</label>
             <input
