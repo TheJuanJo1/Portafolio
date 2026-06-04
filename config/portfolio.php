@@ -3,7 +3,7 @@
 return [
     'name' => 'Juan Moreno',
     'title' => 'Desarrollador Full Stack',
-    'email' => 'juanmoreno@example.com',
+    'email' => 'mbappejuan464@gmail.com',
     'github' => 'https://github.com/TheJuanJo1',
     'linkedin' => 'https://linkedin.com/in/juanmoreno',
     'seo' => [
