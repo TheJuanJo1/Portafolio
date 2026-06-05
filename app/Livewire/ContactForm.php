@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Illuminate\Support\Facades\Mail;
 
 class ContactForm extends Component
 {
@@ -25,9 +26,25 @@ class ContactForm extends Component
     {
         $this->validate();
 
-        // Preparado para futura integración de correo (Mail::to(...)->send(...))
+        Mail::raw(
+            "Nombre: {$this->name}\n" .
+            "Correo: {$this->email}\n" .
+            "Asunto: {$this->subject}\n\n" .
+            "Mensaje:\n{$this->message}",
+            function ($mail) {
+                $mail->to('mbappejuan464@gmail.com')
+                    ->subject('Nuevo mensaje desde el portafolio');
+            }
+        );
+
         $this->submitted = true;
-        $this->reset(['name', 'email', 'subject', 'message']);
+
+        $this->reset([
+            'name',
+            'email',
+            'subject',
+            'message'
+        ]);
     }
 
     public function render()
