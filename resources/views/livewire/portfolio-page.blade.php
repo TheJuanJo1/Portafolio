@@ -1,7 +1,9 @@
-<div>
+@php
+    $portfolio = config('portfolio');
+@endphp
+<div class="flex flex-col min-h-screen">
     <livewire:sections.navbar />
-
-    <main>
+    <main class="flex-1">
         <livewire:sections.hero />
         <livewire:sections.about />
         <livewire:sections.technologies />
@@ -21,7 +23,8 @@
                 <livewire:contact-form />
             </div>
         </section>
+        
     </main>
-
     <livewire:sections.footer />
+    @include('livewire.sections.social-floating')
 </div>
