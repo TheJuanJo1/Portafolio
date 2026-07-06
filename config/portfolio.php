@@ -5,7 +5,7 @@ return [
     'title' => 'Desarrollador Full Stack',
     'email' => 'mbappejuan464@gmail.com',
     'github' => 'https://github.com/TheJuanJo1',
-    'instagram' => 'https://instagram.com/ejemplo_usuario',
+    'instagram' => 'https://www.instagram.com/juan_jose_morenoc',
     'seo' => [
         'title' => 'Juan Moreno | Desarrollador Full Stack',
         'description' => 'Portafolio profesional de Juan Moreno — Desarrollador Full Stack especializado en Laravel, PHP, JavaScript y soluciones web para sectores educativo y empresarial.',

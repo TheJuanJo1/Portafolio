@@ -35,18 +35,7 @@
 
             <div class="relative flex justify-center lg:justify-end reveal reveal-delay-2">
                 <div class="hero-visual">
-                    <div class="hero-orbit hero-orbit-1" aria-hidden="true"></div>
-                    <div class="hero-orbit hero-orbit-2" aria-hidden="true"></div>
-
-                    <div class="profile-ring">
-                        <img
-                            src="{{ asset('images/profile-placeholder.svg') }}"
-                            alt="Fotografía de perfil de {{ $portfolio['name'] }}"
-                            class="profile-image"
-                            width="280"
-                            height="280"
-                        >
-                    </div>
+                    <img src="{{ asset('img/foto.png') }}" alt="Fotografía de perfil de {{ $portfolio['name'] }}" class="profile-image" width="280" height="280">
 
                     <div class="float-card float-card-1 glass-card" aria-hidden="true">
                         <span class="text-[var(--accent)] font-mono text-sm">&lt;/&gt;</span>
