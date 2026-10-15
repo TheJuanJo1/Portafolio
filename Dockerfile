@@ -31,7 +31,7 @@ WORKDIR /var/www/html
 # Copiar los archivos del proyecto
 COPY . /var/www/html
 
-# Crear carpetas de almacenamiento y caché explícitamente y darles permisos totales
+# Crear carpetas de almacenamiento y caché explícitamente y darles permisos
 RUN mkdir -p /var/www/html/storage/framework/sessions \
     && mkdir -p /var/www/html/storage/framework/views \
     && mkdir -p /var/www/html/storage/framework/cache \
@@ -54,5 +54,5 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.
 # Exponer el puerto 80
 EXPOSE 80
 
-# Comando para iniciar Apache y ejecutar migraciones automáticamente al arrancar
-CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && apache2-foreground
+# Comando para limpiar caché, ejecutar migraciones y arrancar Apache al desplegar
+CMD ["sh", "-c", "php artisan config:clear && php artisan cache:clear && php artisan view:clear && php artisan migrate --force && apache2-foreground"]
