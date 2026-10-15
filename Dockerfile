@@ -1,6 +1,6 @@
 FROM php:8.2-apache
 
-# Instalar dependencias del sistema y extensiones de PHP
+# Instalar dependencias del sistema, extensiones de PHP y Node.js para compilar con Vite
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libpq-dev \
     zip \
-    unzip
+    unzip \
+    && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
 
 # Limpiar caché de apt
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -29,7 +31,7 @@ WORKDIR /var/www/html
 # Copiar los archivos del proyecto
 COPY . /var/www/html
 
-# Crear carpetas de almacenamiento y caché explícitamente y darles permisos totales antes de Composer
+# Crear carpetas de almacenamiento y caché explícitamente y darles permisos totales
 RUN mkdir -p /var/www/html/storage/framework/sessions \
     && mkdir -p /var/www/html/storage/framework/views \
     && mkdir -p /var/www/html/storage/framework/cache \
@@ -38,8 +40,11 @@ RUN mkdir -p /var/www/html/storage/framework/sessions \
     && chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Instalar dependencias de producción con Composer
+# Instalar dependencias de PHP con Composer
 RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Instalar dependencias de Node.js y compilar el frontend con Vite
+RUN npm install && npm run build
 
 # Cambiar el DocumentRoot de Apache para que apunte a la carpeta 'public' de Laravel
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
